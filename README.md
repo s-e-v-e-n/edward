@@ -19,7 +19,7 @@ QUICKSTART
     - Die generierte edward.vap-Datei in Voiceattack importieren.
     - Elite spielen und dabei den Computer anschreien.
 
-
+Ob eine Weiterentwicklung an diesem Projekt eine gute Idee ist, könnt Ihr mir mir hier zeigen -> https://www.paypal.me/sevengear
 
 
 Story:

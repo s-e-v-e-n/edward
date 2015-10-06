@@ -1,0 +1,77 @@
+<Command xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Id>51a18540-cb0f-49e3-848f-051e993485e8</Id>
+    <CommandString>New Command 2</CommandString>
+    <ActionSequence>
+        <CommandAction>
+            <PairingSet>false</PairingSet>
+            <Ordinal>0</Ordinal>
+            <ConditionMet xsi:nil="true" />
+            <IndentLevel>0</IndentLevel>
+            <Id>6238509f-cdd5-4296-a924-55c0a9db7e69</Id>
+            <ActionType>PressKey</ActionType>
+            <Duration>0.1</Duration>
+            <Delay>0</Delay>
+            <KeyCodes>
+                <unsignedShort>01</unsignedShort>
+            </KeyCodes>
+            <X>0</X>
+            <Y>0</Y>
+            <InputMode>0</InputMode>
+            <ConditionPairing>0</ConditionPairing>
+            <ConditionGroup>0</ConditionGroup>
+            <ConditionStartOperator>0</ConditionStartOperator>
+            <ConditionStartValue>0</ConditionStartValue>
+            <ConditionStartValueType>0</ConditionStartValueType>
+            <IsSuffixAction>false</IsSuffixAction>
+        </CommandAction>
+        <CommandAction>
+            <PairingSet>false</PairingSet>
+            <Ordinal>0</Ordinal>
+            <ConditionMet xsi:nil="true" />
+            <IndentLevel>0</IndentLevel>
+            <Id>173f2c5f-d6ca-4b8e-992f-7ae54a3eaf9a</Id>
+            <ActionType>Say</ActionType>
+            <Duration>0</Duration>
+            <Delay>0</Delay>
+            <KeyCodes />
+            <Context>UNINITIALISIERT</Context>
+            <X>100</X>
+            <Y>0</Y>
+            <InputMode>0</InputMode>
+            <ConditionPairing>0</ConditionPairing>
+            <ConditionGroup>0</ConditionGroup>
+            <ConditionStartOperator>0</ConditionStartOperator>
+            <ConditionStartValue>0</ConditionStartValue>
+            <ConditionStartValueType>0</ConditionStartValueType>
+            <IsSuffixAction>false</IsSuffixAction>
+        </CommandAction>
+    </ActionSequence>
+    <Async>false</Async>
+    <Enabled>true</Enabled>
+    <UseShortcut>false</UseShortcut>
+    <keyValue>0</keyValue>
+    <keyShift>0</keyShift>
+    <keyAlt>0</keyAlt>
+    <keyCtrl>0</keyCtrl>
+    <keyWin>0</keyWin>
+    <keyPassthru>true</keyPassthru>
+    <UseSpokenPhrase>true</UseSpokenPhrase>
+    <onlyKeyUp>false</onlyKeyUp>
+    <RepeatNumber>2</RepeatNumber>
+    <RepeatType>0</RepeatType>
+    <CommandType>0</CommandType>
+    <SourceProfile>00000000-0000-0000-0000-000000000000</SourceProfile>
+    <UseConfidence>false</UseConfidence>
+    <minimumConfidenceLevel>0</minimumConfidenceLevel>
+    <UseJoystick>false</UseJoystick>
+    <joystickNumber>0</joystickNumber>
+    <joystickButton>0</joystickButton>
+    <joystickNumber2>0</joystickNumber2>
+    <joystickButton2>0</joystickButton2>
+    <joystickUp>false</joystickUp>
+    <KeepRepeating>false</KeepRepeating>
+    <UseProcessOverride>false</UseProcessOverride>
+    <Referrer xsi:nil="true" />
+    <Confidence>0</Confidence>
+    <PrefixActionCount>0</PrefixActionCount>
+</Command>

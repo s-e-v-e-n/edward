@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- Kommandos die mit "Axis" oder "Thrust" enden sind meist an analoge Eingänge wie Joysticks gebunden, daher sind sie hier lediglich der Vollständigkeit halber und für spätere Funktionen aufgeführt. Für die meisten Achsen gibt es jedoch auch Kommandos für einen digitale Eingang wie eine Taste auf der Tastatur oder ein Button auf dem Joystick.
+
+    Fokussieren sie sich beim anpassen auf die "Buttons".
+
+    -->
+    <KeyboardLayout>
+        de-DE
+    </KeyboardLayout>
+    <!-- Maus zurücksetzen, manchmal hindert einen die Tischkante am richtigen Lenkmanöver. Dafür ist dieses Kommando -->
+    <MouseReset>
+        Maus zurücksetzen
+    </MouseReset>
+
+    <!-- Gierachse. Wie im Auto lenkt es die Nase des Fahrzeugs nach links oder rechts-->
+    <YawAxis>
+        Gierachse
+    </YawAxis>
+    <!-- nach links ziehen -->
+    <YawLeftButton>
+        nach links ziehen
+    </YawLeftButton>
+    <!-- nach rechts ziehen -->
+    <YawRightButton>
+        nach rechts ziehen
+    </YawRightButton>
+
+    <!-- Gier zu rollen, bedeutet: wenn sie die Schiffsnase nach links lenken neigt es sich gleichzeitig etwas in die selbe Richtung. Motorradfahrer sind so etwas gewohnt. -->
+    <YawToRollButton>
+        Gier zu rollen
+    </YawToRollButton>
+
+    <!-- Rollachse -->
+    <RollAxis>
+        Rollachse
+    </RollAxis>
+    <!-- links rollen -->
+    <RollLeftButton>
+        links rollen
+    </RollLeftButton>
+    <!-- rechts rollen -->
+    <RollRightButton>
+        rechts rollen
+    </RollRightButton>
+
+    <!-- Nickachse. Diese Achse kennen sie nur in den seltensten Fällen aus dem Straßenverkehr, es sei denn sie sind Motorradrennfahrer auf der Zielgeraden oder Dragsterpilot. Die Schiffsnase geht dabei entweder hoch oder runter.-->
+    <PitchAxis>
+        Nickachse
+    </PitchAxis>
+    <!-- hoch ziehen -->
+    <PitchUpButton>
+        hoch ziehen
+    </PitchUpButton>
+    <!-- runter drücken -->
+    <PitchDownButton>
+        runter drücken
+    </PitchDownButton>
+
+    <!-- Horizontalschub. Für die Spieler von Egoshootern: Das hier ist das Äquivalent zu "Strafe". Seitwärtsbewegung ohne Drehung des Schiffs. -->
+    <LateralThrust>
+        Horizontalschub
+    </LateralThrust>
+    <!-- Schub links -->
+    <LeftThrustButton>
+        Schub links
+    </LeftThrustButton>
+    <!-- Schub rechts -->
+    <RightThrustButton>
+        Schub rechts
+    </RightThrustButton>
+
+    <!-- Vertikalschub. Wie im Aufzug. -->
+    <VerticalThrust>
+        Vertikalschub
+    </VerticalThrust>
+    <!-- Schub hoch -->
+    <UpThrustButton>
+        Schub hoch
+    </UpThrustButton>
+    <!-- Schub runter -->
+    <DownThrustButton>
+        Schub runter
+    </DownThrustButton>
+
+    <!-- Frontalschub. Die meistgenutze Bewegungsrichtung in Fahrzeugen. Vorwärts bzw. Rückwärts -->
+    <AheadThrust>
+        Frontalschub
+    </AheadThrust>
+    <!-- Schub nach vorn -->
+    <ForwardThrustButton>
+        Schub nach vorn
+    </ForwardThrustButton>
+    <!-- Schub zurück -->
+    <BackwardThrustButton>
+        Schub zurück
+    </BackwardThrustButton>
+
+    <!-- Schubachse, das Gaspedal -->
+    <ThrottleAxis>
+        Schubachse
+    </ThrottleAxis>
+    <!-- Schub umkehren oder den Rückwärtsgang einlegen -->
+    <ToggleReverseThrottleInput>
+        Schub umkehren
+    </ToggleReverseThrottleInput>
+    <!-- vorwärts -->
+    <ForwardKey>
+        vorwärts
+    </ForwardKey>
+    <!-- rückwärts -->
+    <BackwardKey>
+        rückwärts
+    </BackwardKey>
+
+    <!-- Mit den nachfolgenden 9 Kommandos steuern sie das "Gaspedal" oder genauer den Schub und den Umkehrschub in Stufen. -->
+    <!-- Volle Kraft zurück -->
+    <SetSpeedMinus100>
+        Volle Kraft zurück
+    </SetSpeedMinus100>
+    <!-- Dreiviertel Kraft zurück -->
+    <SetSpeedMinus75>
+        Dreiviertel Kraft zurück
+    </SetSpeedMinus75>
+    <!-- Halbe Kraft zurück -->
+    <SetSpeedMinus50>
+        Halbe Kraft zurück
+    </SetSpeedMinus50>
+    <!-- Viertel Kraft zurück -->
+    <SetSpeedMinus25>
+        Viertel Kraft zurück
+    </SetSpeedMinus25>
+    <!-- Alle Maschinen stop -->
+    <SetSpeedZero>
+        Alle Maschinen stop
+    </SetSpeedZero>
+    <!-- Viertel Kraft voraus -->
+    <SetSpeed25>
+        Viertel Kraft voraus
+    </SetSpeed25>
+    <!-- Halbe Kraft voraus -->
+    <SetSpeed50>
+        Halbe Kraft voraus
+    </SetSpeed50>
+    <!-- Dreiviertel Kraft voraus -->
+    <SetSpeed75>
+        Dreiviertel Kraft voraus
+    </SetSpeed75>
+    <!-- Volle Kraft voraus -->
+    <SetSpeed100>
+        Volle Kraft voraus
+    </SetSpeed100>
+
+    <!-- Flugassistent ein und ausschalten-->
+    <ToggleFlightAssist>
+        Flugassistent
+    </ToggleFlightAssist>
+
+    <!-- BoostJuice, der Saft sei mit dir -->
+    <UseBoostJuice>
+        Nachbrenner
+    </UseBoostJuice>
+    <!-- Impuls Warp Kombination. Name ist Programm. Hier ist die Besonderheit zu sehen wenn man englische Begriffe in deutscher Spracherkennung nutzt, muss man etwas erfinderisch werden was die Schreibweise angeht. Dann versteht man sich besser mit seinem Computer. -->
+    <HyperSuperCombination>
+        Impuls Woarp Kombination
+    </HyperSuperCombination>
+    <!-- Impulsantrieb -->
+    <Supercruise>
+        Impulsantrieb
+    </Supercruise>
+    <!-- Woarpantrieb;Hyperraumantrieb -->
+    <Hyperspace>
+        Woarpantrieb;Hyperraumantrieb
+    </Hyperspace>
+    <!-- Rotationskorrektur -->
+    <DisableRotationCorrectToggle>
+        Rotationskorrektur
+    </DisableRotationCorrectToggle>
+
+    <!-- Ziel anvisieren -->
+    <SelectTarget>
+        Ziel anvisieren
+    </SelectTarget>
+    <!-- nächstes Ziel -->
+    <CycleNextTarget>
+        nächstes Ziel
+    </CycleNextTarget>
+    <!-- vorheriges Ziel -->
+    <CyclePreviousTarget>
+        vorheriges Ziel
+    </CyclePreviousTarget>
+    <!-- Bedrohung anvisieren -->
+    <SelectHighestThreat>
+        Bedrohung anvisieren
+    </SelectHighestThreat>
+    <!-- nächste Bedrohung -->
+    <CycleNextHostileTarget>
+        nächste Bedrohung
+    </CycleNextHostileTarget>
+    <!-- vorherige Bedrohung -->
+    <CyclePreviousHostileTarget>
+        vorherige Bedrohung
+    </CyclePreviousHostileTarget>
+    <!-- Ziel 0 -->
+    <TargetWingman0>
+        Ziel 0
+    </TargetWingman0>
+    <!-- Ziel 1 -->
+    <TargetWingman1>
+        Ziel 1
+    </TargetWingman1>
+    <!-- Ziel 2 -->
+    <TargetWingman2>
+        Ziel 2
+    </TargetWingman2>
+    <!-- Das Ziel des eigenen Ziels wird anvisiert -->
+    <SelectTargetsTarget>
+        Wer ist das Ziel?;Sein Ziel anvisieren;Auf wen hat er es abgesehen;Wen hat er im Visier
+    </SelectTargetsTarget>
+    <!-- Flügelsperre -->
+    <WingNavLock>
+        Flügelsperre
+    </WingNavLock>
+
+    <!-- Subsystem wechseln -->
+    <CycleNextSubsystem>
+        Subsystem wechseln
+    </CycleNextSubsystem>
+    <!-- Subsystem zurück wechseln -->
+    <CyclePreviousSubsystem>
+        Subsystem zurück wechseln
+    </CyclePreviousSubsystem>
+    <!-- Ziele auf nächstes Routen System -->
+    <TargetNextRouteSystem>
+        Ziele auf nächstes Routen System
+    </TargetNextRouteSystem>
+
+    <!-- Feuern, Feuer eröffnen bzw. die Primärwaffe benutzen -->
+    <PrimaryFire>
+        Feuer;Feuer eröffnen
+    </PrimaryFire>
+    <!-- Sekundärfeuer, Sekundärwaffe benutzen -->
+    <SecondaryFire>
+        Sekundärfeuer;Sekundärfeuer eröffnen;Torpedos abfeuern
+    </SecondaryFire>
+    <!-- Waffengruppe wechseln -->
+    <CycleFireGroupNext>
+        Waffen wechseln
+    </CycleFireGroupNext>
+    <!-- Waffengruppe zurück wechseln -->
+    <CycleFireGroupPrevious>
+        Waffen zurück wechseln
+    </CycleFireGroupPrevious>
+
+    <!-- Hardpoint -->
+    <DeployHardpointToggle>
+        Fixpunkt
+    </DeployHardpointToggle>
+    <!-- ButtonUpInput -->
+    <ToggleButtonUpInput>
+        Battn ap Input
+    </ToggleButtonUpInput>
+    <!-- DeployHeatSink -->
+    <DeployHeatSink>
+        Kühlkörper
+    </DeployHeatSink>
+    <!-- Die Scheinwerfer des Schiffs ein- und ausschalten -->
+    <ShipSpotLightToggle>
+        Licht
+    </ShipSpotLightToggle>
+
+    <!-- Analoge Eingabe für den darzustellenden Radarbereich -->
+    <RadarRangeAxis>
+        Radarweite Achse
+    </RadarRangeAxis>
+    <!-- Radarbereich erweitern -->
+    <RadarIncreaseRange>
+        Radar erweitern
+    </RadarIncreaseRange>
+    <!-- Radarbereich verringern -->
+    <RadarDecreaseRange>
+        Radar verringern
+    </RadarDecreaseRange>
+
+    <!-- Die Energie wird einen Punkt mehr auf die Schilde gelegt-->
+    <IncreaseEnginesPower>
+        Energie auf Schilde;mehr Energie auf Schilde;noch mehr Energie auf Schilde
+    </IncreaseEnginesPower>
+    <!-- Die Energie wird einen Punkt mehr auf das Waffensystem gelegt -->
+    <IncreaseWeaponsPower>
+        Energie auf Waffensystem;mehr Energie auf Waffensystem;noch mehr Energie auf Waffensystem
+    </IncreaseWeaponsPower>
+    <!-- Die Energie wird einen Punkt mehr auf den Antrieb und Bordsysteme gelegt -->
+    <IncreasehinenSystemsPower> 
+        Energie auf die Maschinen;mehr Energie auf die Maschinen;noch mehr Energie auf die Maschinen
+    </IncreaseSystemsPower>
+    <!-- Energie wird gleichmäßig auf allen Systemen verteilt -->
+    <ResetPowerDistribution>
+        Energie aufteilen
+    </ResetPowerDistribution>
+
+    <!-- Oculus recenter. Ähnlich wie beim Mausreset muss man in VR auch manchmal seinen Blickwinkel neu kalibrieren -->
+    <OculusReset>
+        Oculus
+    </OculusReset>
+
+    <!-- Frachtraum öffnen bzw. schließen -->
+    <ToggleCargoScoop>
+        Frachtraum
+    </ToggleCargoScoop>
+    <!-- Frachtraum leeren -->
+    <EjectAllCargo>
+        Frachtraum leeren
+    </EjectAllCargo>
+    <!-- Fahrwerk ein bzw. ausfahren -->
+    <LandingGearToggle>
+        Fahrwerk
+    </LandingGearToggle>
+
+    <!-- Mikrofon stumm schalten -->
+    <MicrophoneMute>
+        Mikrofon stumm schalten 
+    </MicrophoneMute>
+    <!-- Schildzelle benutzen -->
+    <UseShieldCell>
+        Schildzelle benutzen
+    </UseShieldCell>
+    <!-- Täuschkörper abfeuern andere sagen dazu Gegenmaßnahmen-->
+    <FireChaffLauncher>
+        Täuschkörper
+    </FireChaffLauncher>
+
+    <!-- Foto -->
+    <PhotoCameraToggle>
+        Foto
+    </PhotoCameraToggle>
+
+    <!-- Konsole -->
+    <UIFocus>
+        Konsole
+    </UIFocus>
+    <!-- Linke Konsole -->
+    <FocusLeftPanel>
+        Linke Konsole
+    </FocusLeftPanel>
+    <!-- Rechte Konsole -->
+    <FocusRightPanel>
+        Rechte Konsole
+    </FocusRightPanel>
+    <!-- Radar Konsole -->
+    <FocusRadarPanel>
+        Radar Konsole
+    </FocusRadarPanel>
+    <!-- Kurznachrichten Konsole -->
+    <QuickCommsPanel>
+        Kurznachrichten Konsole
+    </QuickCommsPanel>
+    <!-- Nachrichten Konsole -->
+    <FocusCommsPanel>
+        Nachrichten Konsole
+    </FocusCommsPanel>
+    <!-- Galaxie Karte -->
+    <GalaxyMapOpen>
+        Galaxie Karte
+    </GalaxyMapOpen>
+    <!-- Sternensystem Karte -->
+    <SystemMapOpen>
+        Sternensystem Karte
+    </SystemMapOpen>
+    <!-- Helmsteuerung -->
+    <HeadLookToggle>
+        Helmsteuerung
+    </HeadLookToggle>
+    <!-- Pause -->
+    <Pause>
+        Pause
+    </Pause>
+    <!-- hoch -->
+    <UI_Up>
+        hoch
+    </UI_Up>
+    <!-- runter -->
+    <UI_Down>
+        runter
+    </UI_Down>
+    <!-- links -->
+    <UI_Left>
+        links
+    </UI_Left>
+    <!-- rechts -->
+    <UI_Right>
+        rechts
+    </UI_Right>
+    <!-- auswählen -->
+    <UI_Select>
+        auswählen
+    </UI_Select>
+    <!-- zurück -->
+    <UI_Back>
+        zurück
+    </UI_Back>
+    <!-- nächste Konsole -->
+    <CycleNextPanel>
+        nächste Konsole
+    </CycleNextPanel>
+    <!-- vorherige Konsole -->
+    <CyclePreviousPanel>
+        vorherige Konsole
+    </CyclePreviousPanel>
+ 
+    <!-- Helmsteuerung zurücksetzen -->
+    <HeadLookReset>
+        Helmsteuerung zurücksetzen
+    </HeadLookReset>
+    <!-- hoch schauen -->
+    <HeadLookPitchUp>
+        hoch schauen
+    </HeadLookPitchUp>
+    <!-- runter schauen -->
+    <HeadLookPitchDown>
+        runter schauen
+    </HeadLookPitchDown>
+    <!-- Kopfnickachse -->
+    <HeadLookPitchAxisRaw>
+        Kopfnickachse
+    </HeadLookPitchAxisRaw>
+    <!-- links schauen -->
+    <HeadLookYawLeft>
+        links schauen
+    </HeadLookYawLeft>
+    <!-- rechts schauen -->
+    <HeadLookYawRight>
+        rechts schauen
+    </HeadLookYawRight>
+    <!-- Kopfdrehachse -->
+    <HeadLookYawAxis>
+        Kopfdrehachse
+    </HeadLookYawAxis>
+
+    <!-- Kameranickachse -->
+    <CamPitchAxis>
+        Kameranickachse
+    </CamPitchAxis>
+    <!-- Kamera nach oben -->
+    <CamPitchUp>
+        Kamera nach oben
+    </CamPitchUp>
+    <!-- Kamera nach unten -->
+    <CamPitchDown>
+        Kamera nach unten
+    </CamPitchDown>
+    <!-- Kameradrehachse -->
+    <CamYawAxis>
+        Kameradrehachse
+    </CamYawAxis>
+    <!-- Kamera nach links drehen -->
+    <CamYawLeft>
+        Kamera nach links drehen
+    </CamYawLeft>
+    <!-- Kamera nach rechts drehen -->
+    <CamYawRight>
+        Kamera nach rechts drehen
+    </CamYawRight>
+    <!-- Kamera Y Achse -->
+    <CamTranslateYAxis>
+        Kamera Y Achse
+    </CamTranslateYAxis>
+    <!-- Kamera nach vorn -->
+    <CamTranslateForward>
+        Kamera nach vorn
+    </CamTranslateForward>
+    <!-- Kamera nach hinten -->
+    <CamTranslateBackward>
+        Kamera nach hinten
+    </CamTranslateBackward>
+    <!-- Kamera X Achse -->
+    <CamTranslateXAxis>
+        Kamera X Achse
+    </CamTranslateXAxis>
+    <!-- Kamera nach links schieben -->
+    <CamTranslateLeft>
+        Kamera nach links schieben
+    </CamTranslateLeft>
+    <!-- Kamera nach rechts schieben -->
+    <CamTranslateRight>
+        Kamera nach rechts schieben
+    </CamTranslateRight>
+    <!-- Kamera Z Achse -->
+    <CamTranslateZAxis>
+        Kamera Z Achse
+    </CamTranslateZAxis>
+    <!-- Kamera hoch schieben -->
+    <CamTranslateUp>
+        Kamera hoch schieben
+    </CamTranslateUp>
+    <!-- Kamera runter schieben -->
+    <CamTranslateDown>
+        Kamera runter schieben
+    </CamTranslateDown>
+    <!-- Kamera Zoom Achse -->
+    <CamZoomAxis>
+        Kamera Zoom Achse
+    </CamZoomAxis>
+    <!-- Kamera näher ran -->
+    <CamZoomIn>
+        Kamera näher ran
+    </CamZoomIn>
+    <!-- Kamera weiter weg -->
+    <CamZoomOut>
+        Kamera weiter weg
+    </CamZoomOut>
+    <!-- Kamera Z halten -->
+     <CamTranslateZHold>
+        Kamera Z halten
+    </CamTranslateZHold>
+</root>

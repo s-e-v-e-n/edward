@@ -3,7 +3,7 @@
 Erstellen eines Voice-Attack Profils unter Verwendung der Elite Dangerous Konfiguration.
 ========================================================================================
 
-Zuerst möchte ich klarstellen, dass dieses Projekt ein persönliches Projekt von mir ist. Auch wenn ich hier von den Markennamen ** Voice Attack ** oder ** Elite Dangerous ** gebrauch mache, habe ich nichts zu tun mit diesen Marken oder deren Markeninhaber. Diese Software ist in keiner Weise etwas offizielles von den genannten Marken oder deren Rechteinhaben und ist nicht annähernd die Qualität derer Software-Produkte.
+Zuerst möchte ich klarstellen, dass dieses Projekt ein persönliches Projekt von mir ist. Auch wenn ich hier von den Markennamen **Voice Attack** oder **Elite Dangerous** gebrauch mache, habe ich nichts zu tun mit diesen Marken oder deren Markeninhaber. Diese Software ist in keiner Weise etwas offizielles von den genannten Marken oder deren Rechteinhaben und ist nicht annähernd die Qualität derer Software-Produkte.
 
 Durch die Nutzung dieser Software, akzeptieren Sie, dass Sie das in vollem Umfang auf eigenes Risiko tun.
 
@@ -35,7 +35,7 @@ Vor kurzem hatte ich aber wieder etwas Zeit und wollte einfach nur spielen und s
 
 
 Um es kurz zu machen:
------------------
+---------------------
 
 Die Lernkurve für die Tonnen von Tasten, die man sich für [Elite Dangerous] (https://www.elitedangerous.com/)  merken muss ist eine bisschen hoch um mal schnell was zu spielen. Also fing ich an, über das Internet nach Tutorials zur Konfiguration von [Voice Attack] (http://www.voiceattack.com/) zu suchen, nicht zuletzt um den Spaßfaktor zu steigern.
 
@@ -70,21 +70,21 @@ Lösung
 
 1. Binden von Elite-Kommandos direkt an ein Wort oder einen Satz.
 
-    Bearbeiten Sie dazu die Datei **commands.xml** mit einem Editor. Im Beispiel unten sehen Sie, wie das Elite-Kommando "ForwardKey" an das Voicecommand "vorwärts" gebunden wird.
+    Bearbeiten Sie dazu die Datei **commands.xml** mit einem Editor. Im Beispiel unten sehen Sie, wie das Elite-Kommando "ForwardKey" an das Voicecommand "vorwärts" gebunden wird.
 
-    ::
+    ::
 
-        <ForwardKey>
-            vorwärts
-        </ ForwardKey>
+        <ForwardKey>
+            vorwärts
+        </ ForwardKey>
 
 2. Erstellen Sie ein neues VoiceAttack-Profil.
-    
-    Führen sie dazu edward.exe aus oder klicken Sie doppelt darauf. Eine edward.vap-Datei wird erzeugt.
+    
+    Führen sie dazu edward.exe aus oder klicken Sie doppelt darauf. Eine edward.vap-Datei wird erzeugt.
 
 3. Importieren Sie das VoiceAttack Profil (edward.vap).
-    
-    Schauen Sie sich die VoiceAttack Hilfe an, wenn Sie nicht wissen, wie man das macht.
+    
+    Schauen Sie sich die VoiceAttack Hilfe an, wenn Sie nicht wissen, wie man das macht.
 
 4. Spielen sie Elite Dangerous mit Ihrem neuen VoiceAttack Profil.
 

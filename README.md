@@ -3,12 +3,11 @@
 Erstellen eines Voice-Attack Profils unter Verwendung der Elite Dangerous Konfiguration.
 ========================================================================================
 
-Zuerst möchte ich klarstellen, dass dieses Projekt ein persönliches Projekt von mir ist. Auch wenn ich hier von den Markennamen ** Voice Attack ** oder ** Elite Dangerous ** gebrauch mache, damit Menschen diese Projekt finden, habe ich  nichts zu tun mit diesen Marken oder deren Markeninhaber. Diese Software ist in keiner etwas offizielle von den genannten Unternehmen und nicht annähernd die Qualität derer Software-Produkte.
+Zuerst möchte ich klarstellen, dass dieses Projekt ein persönliches Projekt von mir ist. Auch wenn ich hier von den Markennamen ** Voice Attack ** oder ** Elite Dangerous ** gebrauch mache, habe ich nichts zu tun mit diesen Marken oder deren Markeninhaber. Diese Software ist in keiner Weise etwas offizielles von den genannten Marken oder deren Rechteinhaben und ist nicht annähernd die Qualität derer Software-Produkte.
 
 Durch die Nutzung dieser Software, akzeptieren Sie, dass Sie das in vollem Umfang auf eigenes Risiko tun.
 
-IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR ANSPRÜCHE, SCHÄDEN ODER ANDERE HAFTUNG, SEI ES IN EINEM VERTRAG, Schadensersatz oder anderen, DIE AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDEREN HANDLUNGEN MIT DER SOFTWARE.
-
+IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR ANSPRÜCHE ODER SCHÄDEN HAFTBAR, DIE IN VERBINDUNG MIT DER SOFTWARE ODER DEREN NUTZUNG ODER ANDEREN HANDLUNGEN MIT DER SOFTWARE ENTSTANDEN IST.
 
 
 ==========
@@ -28,25 +27,25 @@ Story:
 
 Wie viele andere auch habe ich [Elite Dangerous] (https://www.elitedangerous.com/) in der Kickstarter-Kampagne unterstützt. Traurig ist nur, dass ich bisher nicht viel Zeit hatte zum spielen.
 
-Ich habe drei Mal versucht [Elite Dangerous] (https://www.elitedangerous.com/) anzufangen. Im ersten und zweiten Versuch wollte ich es unter Verwendung der Oculus Rift DK2 spielen. Mit dem HMD auf meinem Kopf bemerkte ich bald, dass ich das viel verwendete [Voice Angriff] (http://www.voiceattack.com/) brauchte, weil ich meine Tastatur nicht mehr sehen konnte.
+Ich habe drei Mal versucht [Elite Dangerous] (https://www.elitedangerous.com/) anzufangen. Im ersten und zweiten Versuch wollte ich es unter Verwendung der Oculus Rift DK2 spielen. Mit dem HMD auf meinem Kopf bemerkte ich bald, dass ich das viel verwendete [Voice Attack] (http://www.voiceattack.com/) brauchte, weil ich meine Tastatur nicht mehr sehen konnte.
 
 Da keiner meiner Rechner stark genug war, um die Schönheit von Elites Grafik und das stereoskopische Rendering für die DK2 zu meistern, hörte ich bald wieder auf zu spielen. Mangel an GPU-Leistung ist kein Spaß im VR.
 
-Vor kurzem hatte ich aber wieder etwas Zeit und wollte einfach nur spielen und so gab ich Elite eine weitere Chance auf einem normalen Bildschirm, ohne DK2 oder [Voice Angriff] (http://www.voiceattack.com/), ganz oldschool.
+Vor kurzem hatte ich aber wieder etwas Zeit und wollte einfach nur spielen und so gab ich Elite eine weitere Chance auf einem normalen Bildschirm, ohne DK2 oder [Voice Attack] (http://www.voiceattack.com/), ganz oldschool.
 
 
 Um es kurz zu machen:
 -----------------
 
-Die Lernkurve für die Tonnen von Tasten, die man sich für [Elite Dangerous] (https://www.elitedangerous.com/)  merken muss ist eine bisschen hoch um mal schnell was zu spielen. Also fing ich an, über das Internet nach Tutorials zur Konfiguration von [ Voice-Angriff] (http://www.voiceattack.com/) zu finden, nciht zuletzt um den Spaßfaktor zu steigern.
+Die Lernkurve für die Tonnen von Tasten, die man sich für [Elite Dangerous] (https://www.elitedangerous.com/)  merken muss ist eine bisschen hoch um mal schnell was zu spielen. Also fing ich an, über das Internet nach Tutorials zur Konfiguration von [Voice Attack] (http://www.voiceattack.com/) zu suchen, nicht zuletzt um den Spaßfaktor zu steigern.
 
-Stellt sich heraus, es würde mehrere Stunden dauert, nur um ein Basis-Setup zu haben, denn man muss in voiceattack eine ganze Menge sachen zusammenklicken und immer wieder zwischen Elite und Voiceattack hin und herwechseln um eine Konfiguration zu finden mit der man zurecht kommt.
+Stellt sich heraus, es würde mehrere Stunden dauert, nur um ein Basis-Setup zu haben, denn man muss in voiceattack eine ganze Menge Sachen zusammenklicken und immer wieder zwischen Elite und Voiceattack hin und herwechseln um eine Konfiguration zu finden mit der man zurecht kommt.
 
 
 Das Hauptproblem:
 -----------------
 
-Ich fand eine Menge Leute im Internet die Elite spielen und Stunden und Tage und sogar Wochen und Monate damit verbringen, um ihr VoiceAttack so zu konfigurieren, dass es perfekt zu ihren Bedürfnissen und Tastaturbelegung in Elite passt. Hinzu kommt, dass einige mittels VoiceAttack komplizierte Logik hinzukonfigurieren um Kommandosequenzen welche häufig verwendet weren in kurzen Sprachkommandos zusammengefasst werden.
+Ich fand eine Menge Leute im Internet die Elite spielen und Stunden und Tage und sogar Wochen und Monate damit verbringen, um ihr VoiceAttack so zu konfigurieren, dass es perfekt zu ihren Bedürfnissen und Tastaturbelegung in Elite passt. Hinzu kommt, dass einige mittels VoiceAttack komplizierte Logik hinzukonfigurieren um Kommandosequenzen welche häufig verwendet werden in kurzen Sprachkommandos zusammen zu fassen.
 
 Einige dieser Leute sind so freundlich, ihre Einstellung, mit der sie schon Stunden verbracht haben zu teilen. So können Sie diese einfach herunterladen und deren VoiceAttack-Profil importieren und Ihre Elite-Einstellungen mit deren Einstellungen überschreiben und schon kann es losgehen.
 

@@ -291,7 +291,7 @@
         Energie auf Waffensystem;mehr Energie auf Waffensystem;noch mehr Energie auf Waffensystem
     </IncreaseWeaponsPower>
     <!-- Die Energie wird einen Punkt mehr auf den Antrieb und Bordsysteme gelegt -->
-    <IncreasehinenSystemsPower> 
+    <IncreaseSystemsPower> 
         Energie auf die Maschinen;mehr Energie auf die Maschinen;noch mehr Energie auf die Maschinen
     </IncreaseSystemsPower>
     <!-- Energie wird gleichmäßig auf allen Systemen verteilt -->

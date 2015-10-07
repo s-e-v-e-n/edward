@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Id>35ead2de-8f56-4e61-9de4-d3a6c47bf839</Id>
-  <Name>Edward</Name>
+  <Name>Edvard</Name>
   <Commands />
   <OverrideGlobal>false</OverrideGlobal>
   <GlobalHotkeyIndex>0</GlobalHotkeyIndex>

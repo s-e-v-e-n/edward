@@ -1,4 +1,4 @@
-# Edward
+# edvard
 
 Erstellen eines Voice-Attack Profils unter Verwendung der Elite Dangerous Konfiguration.
 ========================================================================================
@@ -15,8 +15,8 @@ QUICKSTART
 ==========
 
     - Release herunterladen und entpacken.
-    - Edward.exe doppelklicken.
-    - Die generierte edward.vap-Datei in Voiceattack importieren.
+    - edvard.exe doppelklicken.
+    - Die generierte edvard.vap-Datei in Voiceattack importieren.
     - Elite spielen und dabei den Computer anschreien.
 
 Ob eine Weiterentwicklung an diesem Projekt eine gute Idee ist, könnt Ihr mir mir hier zeigen -> https://www.paypal.me/sevengear
@@ -80,9 +80,9 @@ Lösung
 
 2. Erstellen Sie ein neues VoiceAttack-Profil.
     
-    Führen sie dazu edward.exe aus oder klicken Sie doppelt darauf. Eine edward.vap-Datei wird erzeugt.
+    Führen sie dazu edvard.exe aus oder klicken Sie doppelt darauf. Eine edvard.vap-Datei wird erzeugt.
 
-3. Importieren Sie das VoiceAttack Profil (edward.vap).
+3. Importieren Sie das VoiceAttack Profil (edvard.vap).
     
     Schauen Sie sich die VoiceAttack Hilfe an, wenn Sie nicht wissen, wie man das macht.
 
@@ -173,7 +173,7 @@ Solution
 
 2. Generate a new VoiceAttack Profile.
     
-    Run edward.exe or doubleclick on it. A edward.vap file should be generated.
+    Run edvard.exe or doubleclick on it. A edvard.vap file should be generated.
 
 3. Import the VoiceAttack Profile.
     

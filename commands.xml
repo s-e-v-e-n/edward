@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <!-- Kommandos die mit "Axis" oder "Thrust" enden sind meist an analoge Eingänge wie Joysticks gebunden, daher sind sie hier lediglich der Vollständigkeit halber und für spätere Funktionen aufgeführt. Für die meisten Achsen gibt es jedoch auch Kommandos für einen digitale Eingang wie eine Taste auf der Tastatur oder ein Button auf dem Joystick.
-
-    Fokussieren sie sich beim anpassen auf die "Buttons".
-    -->
-    <KeyboardLayout>
-        <CommandString>de-DE</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </KeyboardLayout>
     <!-- Maus zurücksetzen, manchmal hindert einen die Tischkante am richtigen Lenkmanöver. Dafür ist dieses Kommando -->
     <MouseReset>
         <CommandString>Maus zurücksetzen</CommandString>
         <ReplyAccept></ReplyAccept>
     </MouseReset>
+    <!-- Oculus recenter. Ähnlich wie beim Mausreset muss man in VR auch manchmal seinen Blickwinkel neu kalibrieren -->
+    <OculusReset>
+        <CommandString>Oculus</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </OculusReset>
+
 
     <!-- Gierachse. Wie im Auto lenkt es die Nase des Fahrzeugs nach links oder rechts-->
-    <YawAxis>
-        <CommandString>Gierachse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </YawAxis>
     <!-- nach links ziehen -->
     <YawLeftButton>
         <CommandString>nach links ziehen</CommandString>
@@ -37,10 +31,6 @@
     </YawToRollButton>
 
     <!-- Rollachse -->
-    <RollAxis>
-        <CommandString>Rollachse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </RollAxis>
     <!-- links rollen -->
     <RollLeftButton>
         <CommandString>links rollen</CommandString>
@@ -53,10 +43,6 @@
     </RollRightButton>
 
     <!-- Nickachse. Diese Achse kennen sie nur in den seltensten Fällen aus dem Straßenverkehr, es sei denn sie sind Motorradrennfahrer auf der Zielgeraden oder Dragsterpilot. Die Schiffsnase geht dabei entweder hoch oder runter.-->
-    <PitchAxis>
-        <CommandString>Nickachse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </PitchAxis>
     <!-- hoch ziehen -->
     <PitchUpButton>
         <CommandString>hoch ziehen</CommandString>
@@ -69,10 +55,6 @@
     </PitchDownButton>
 
     <!-- Horizontalschub. Für die Spieler von Egoshootern: Das hier ist das Äquivalent zu "Strafe". Seitwärtsbewegung ohne Drehung des Schiffs. -->
-    <LateralThrust>
-        <CommandString>Horizontalschub</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </LateralThrust>
     <!-- Schub links -->
     <LeftThrustButton>
         <CommandString>Schub links</CommandString>
@@ -85,10 +67,6 @@
     </RightThrustButton>
 
     <!-- Vertikalschub. Wie im Aufzug. -->
-    <VerticalThrust>
-        <CommandString>Vertikalschub</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </VerticalThrust>
     <!-- Schub hoch -->
     <UpThrustButton>
         <CommandString>Schub hoch</CommandString>
@@ -101,10 +79,6 @@
     </DownThrustButton>
 
     <!-- Frontalschub. Die meistgenutze Bewegungsrichtung in Fahrzeugen. Vorwärts bzw. Rückwärts -->
-    <AheadThrust>
-        <CommandString>Frontalschub</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </AheadThrust>
     <!-- Schub nach vorn -->
     <ForwardThrustButton>
         <CommandString>Schub nach vorn</CommandString>
@@ -117,10 +91,6 @@
     </BackwardThrustButton>
 
     <!-- Schubachse, das Gaspedal -->
-    <ThrottleAxis>
-        <CommandString>Schubachse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </ThrottleAxis>
     <!-- Schub umkehren oder den Rückwärtsgang einlegen -->
     <ToggleReverseThrottleInput>
         <CommandString>Schub umkehren</CommandString>
@@ -330,11 +300,7 @@
         <ReplyAccept></ReplyAccept>
     </ShipSpotLightToggle>
 
-    <!-- Analoge Eingabe für den darzustellenden Radarbereich -->
-    <RadarRangeAxis>
-        <CommandString>Radarweite Achse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </RadarRangeAxis>
+    <!-- Eingabe für den darzustellenden Radarbereich -->
     <!-- Radarbereich erweitern -->
     <RadarIncreaseRange>
         <CommandString>Radar erweitern</CommandString>
@@ -367,12 +333,6 @@
         <ReplyAccept></ReplyAccept>
     </ResetPowerDistribution>
 
-    <!-- Oculus recenter. Ähnlich wie beim Mausreset muss man in VR auch manchmal seinen Blickwinkel neu kalibrieren -->
-    <OculusReset>
-        <CommandString>Oculus</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </OculusReset>
-
     <!-- Frachtraum öffnen bzw. schließen -->
     <ToggleCargoScoop>
         <CommandString>Frachtraum</CommandString>
@@ -391,7 +351,7 @@
 
     <!-- Mikrofon stumm schalten -->
     <MicrophoneMute>
-        <CommandString>Mikrofon stumm schalten </CommandString>
+        <CommandString>Mikrofon stumm schalten</CommandString>
         <ReplyAccept></ReplyAccept>
     </MicrophoneMute>
     <!-- Schildzelle benutzen -->
@@ -539,10 +499,6 @@
     </HeadLookYawAxis>
 
     <!-- Kameranickachse -->
-    <CamPitchAxis>
-        <CommandString>Kameranickachse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </CamPitchAxis>
     <!-- Kamera nach oben -->
     <CamPitchUp>
         <CommandString>Kamera nach oben</CommandString>
@@ -554,10 +510,6 @@
         <ReplyAccept></ReplyAccept>
     </CamPitchDown>
     <!-- Kameradrehachse -->
-    <CamYawAxis>
-        <CommandString>Kameradrehachse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </CamYawAxis>
     <!-- Kamera nach links drehen -->
     <CamYawLeft>
         <CommandString>Kamera nach links drehen</CommandString>
@@ -569,10 +521,6 @@
         <ReplyAccept></ReplyAccept>
     </CamYawRight>
     <!-- Kamera Y Achse -->
-    <CamTranslateYAxis>
-        <CommandString>Kamera Y Achse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </CamTranslateYAxis>
     <!-- Kamera nach vorn -->
     <CamTranslateForward>
         <CommandString>Kamera nach vorn</CommandString>
@@ -584,10 +532,6 @@
         <ReplyAccept></ReplyAccept>
     </CamTranslateBackward>
     <!-- Kamera X Achse -->
-    <CamTranslateXAxis>
-        <CommandString>Kamera X Achse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </CamTranslateXAxis>
     <!-- Kamera nach links schieben -->
     <CamTranslateLeft>
         <CommandString>Kamera nach links schieben</CommandString>
@@ -599,10 +543,6 @@
         <ReplyAccept></ReplyAccept>
     </CamTranslateRight>
     <!-- Kamera Z Achse -->
-    <CamTranslateZAxis>
-        <CommandString>Kamera Z Achse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </CamTranslateZAxis>
     <!-- Kamera hoch schieben -->
     <CamTranslateUp>
         <CommandString>Kamera hoch schieben</CommandString>
@@ -614,10 +554,6 @@
         <ReplyAccept></ReplyAccept>
     </CamTranslateDown>
     <!-- Kamera Zoom Achse -->
-    <CamZoomAxis>
-        <CommandString>Kamera Zoom Achse</CommandString>
-        <ReplyAccept></ReplyAccept>
-    </CamZoomAxis>
     <!-- Kamera näher ran -->
     <CamZoomIn>
         <CommandString>Kamera näher ran</CommandString>

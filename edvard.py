@@ -91,7 +91,7 @@ def getReplyAcceptString(vaMapping,action):
             reply = reply.split(";")
             reply = reply[0]
     except:
-        printError("Voicecommand not set for '{0}'! Edit binds.xml".format(action))
+        printError("commands:\tVoicecommand not set for '{0}'!".format(action))
         reply = None
     return reply
 
@@ -111,7 +111,7 @@ def getCommandString(vaMapping,action):
         command = command.replace("\n","")
         command = command.strip(" ")
     except:
-        printError("Voicecommand not set for '{0}'! Edit binds.xml".format(action))
+        printError("commands:\tVoicecommand not set for '{0}'!".format(action))
         command = None
     return command
 

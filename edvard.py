@@ -51,7 +51,8 @@ def createVoiceAttackCommand( commandname, keycode, context):
     commandNameNodeId[0].text=str(uuid.uuid4())
     # ..you say...
     sayAction=commandActionNode[1].findall("./Context")
-    sayAction[0].text="OK, "+context+";"+"Verstanden, "+context
+    reply=context.split(";")
+    sayAction[0].text="OK, "+reply[0]+";"+"Verstanden, "+reply[0]
     sayId=commandActionNode[1].findall("./Id")
     sayId[0].text=str(uuid.uuid4())
     # Description of the voicecommand will be the
@@ -77,16 +78,17 @@ def getContext(vaMapping,action):
         action = action[:-8]
     try:        
         # device = map["Device"]
-        context = vaMapping.find(action)
+        actionNode = vaMapping.find(action)
+        command = actionNode.find("CommandString")
         # remove tabs and newlines
-        context = context.text
-        context = context.replace("\t","")
-        context = context.replace("\n","")
-        context = context.strip(" ")
+        command = command.text
+        command = command.replace("\t","")
+        command = command.replace("\n","")
+        command = command.strip(" ")
     except:
         printError("Voicecommand not set for '{0}'! Edit binds.xml".format(action))
-        context = None
-    return context
+        command = None
+    return command
 
 def getKeycode(keycodes,keyname):
     keyNode = keycodes.find(keyname)
@@ -159,15 +161,15 @@ for keyconfig in eliteConfig:
     # when its a button
     if isAButton is True:
         # Get the voicecommand(context)
-        context = getContext(vaMapping,action)
+        commandString = getContext(vaMapping,action)
         keyName = getKey(keyNode)
         if keyName is "":
             printWarning("No key configured:\t{0}".format(action))
         else:
             keyCode = getKeycode(keycodes, keyName)
         if keyCode is not None:        
-            command = createVoiceAttackCommand(action, keyCode, context)
-            commands.append(command)
+            commandNode = createVoiceAttackCommand(action, keyCode, commandString)
+            commands.append(commandNode)
 
 
 vaProfileFile.write(parsePath(config["files"]["output"]), encoding="utf-8")

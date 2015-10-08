@@ -3,514 +3,634 @@
     <!-- Kommandos die mit "Axis" oder "Thrust" enden sind meist an analoge Eingänge wie Joysticks gebunden, daher sind sie hier lediglich der Vollständigkeit halber und für spätere Funktionen aufgeführt. Für die meisten Achsen gibt es jedoch auch Kommandos für einen digitale Eingang wie eine Taste auf der Tastatur oder ein Button auf dem Joystick.
 
     Fokussieren sie sich beim anpassen auf die "Buttons".
-
     -->
     <KeyboardLayout>
-        de-DE
+        <CommandString>de-DE</CommandString>
+        <ReplyAccept></ReplyAccept>
     </KeyboardLayout>
     <!-- Maus zurücksetzen, manchmal hindert einen die Tischkante am richtigen Lenkmanöver. Dafür ist dieses Kommando -->
     <MouseReset>
-        Maus zurücksetzen
+        <CommandString>Maus zurücksetzen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </MouseReset>
 
     <!-- Gierachse. Wie im Auto lenkt es die Nase des Fahrzeugs nach links oder rechts-->
     <YawAxis>
-        Gierachse
+        <CommandString>Gierachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </YawAxis>
     <!-- nach links ziehen -->
     <YawLeftButton>
-        nach links ziehen
+        <CommandString>nach links ziehen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </YawLeftButton>
     <!-- nach rechts ziehen -->
     <YawRightButton>
-        nach rechts ziehen
+        <CommandString>nach rechts ziehen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </YawRightButton>
 
     <!-- Gier zu rollen, bedeutet: wenn sie die Schiffsnase nach links lenken neigt es sich gleichzeitig etwas in die selbe Richtung. Motorradfahrer sind so etwas gewohnt. -->
     <YawToRollButton>
-        Gier zu rollen
+        <CommandString>Gier zu rollen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </YawToRollButton>
 
     <!-- Rollachse -->
     <RollAxis>
-        Rollachse
+        <CommandString>Rollachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RollAxis>
     <!-- links rollen -->
     <RollLeftButton>
-        links rollen
+        <CommandString>links rollen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RollLeftButton>
     <!-- rechts rollen -->
     <RollRightButton>
-        rechts rollen
+        <CommandString>rechts rollen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RollRightButton>
 
     <!-- Nickachse. Diese Achse kennen sie nur in den seltensten Fällen aus dem Straßenverkehr, es sei denn sie sind Motorradrennfahrer auf der Zielgeraden oder Dragsterpilot. Die Schiffsnase geht dabei entweder hoch oder runter.-->
     <PitchAxis>
-        Nickachse
+        <CommandString>Nickachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </PitchAxis>
     <!-- hoch ziehen -->
     <PitchUpButton>
-        hoch ziehen
+        <CommandString>hoch ziehen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </PitchUpButton>
     <!-- runter drücken -->
     <PitchDownButton>
-        runter drücken
+        <CommandString>runter drücken</CommandString>
+        <ReplyAccept></ReplyAccept>
     </PitchDownButton>
 
     <!-- Horizontalschub. Für die Spieler von Egoshootern: Das hier ist das Äquivalent zu "Strafe". Seitwärtsbewegung ohne Drehung des Schiffs. -->
     <LateralThrust>
-        Horizontalschub
+        <CommandString>Horizontalschub</CommandString>
+        <ReplyAccept></ReplyAccept>
     </LateralThrust>
     <!-- Schub links -->
     <LeftThrustButton>
-        Schub links
+        <CommandString>Schub links</CommandString>
+        <ReplyAccept></ReplyAccept>
     </LeftThrustButton>
     <!-- Schub rechts -->
     <RightThrustButton>
-        Schub rechts
+        <CommandString>Schub rechts</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RightThrustButton>
 
     <!-- Vertikalschub. Wie im Aufzug. -->
     <VerticalThrust>
-        Vertikalschub
+        <CommandString>Vertikalschub</CommandString>
+        <ReplyAccept></ReplyAccept>
     </VerticalThrust>
     <!-- Schub hoch -->
     <UpThrustButton>
-        Schub hoch
+        <CommandString>Schub hoch</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UpThrustButton>
     <!-- Schub runter -->
     <DownThrustButton>
-        Schub runter
+        <CommandString>Schub runter</CommandString>
+        <ReplyAccept></ReplyAccept>
     </DownThrustButton>
 
     <!-- Frontalschub. Die meistgenutze Bewegungsrichtung in Fahrzeugen. Vorwärts bzw. Rückwärts -->
     <AheadThrust>
-        Frontalschub
+        <CommandString>Frontalschub</CommandString>
+        <ReplyAccept></ReplyAccept>
     </AheadThrust>
     <!-- Schub nach vorn -->
     <ForwardThrustButton>
-        Schub nach vorn
+        <CommandString>Schub nach vorn</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ForwardThrustButton>
     <!-- Schub zurück -->
     <BackwardThrustButton>
-        Schub zurück
+        <CommandString>Schub zurück</CommandString>
+        <ReplyAccept></ReplyAccept>
     </BackwardThrustButton>
 
     <!-- Schubachse, das Gaspedal -->
     <ThrottleAxis>
-        Schubachse
+        <CommandString>Schubachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ThrottleAxis>
     <!-- Schub umkehren oder den Rückwärtsgang einlegen -->
     <ToggleReverseThrottleInput>
-        Schub umkehren
+        <CommandString>Schub umkehren</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ToggleReverseThrottleInput>
     <!-- vorwärts -->
     <ForwardKey>
-        vorwärts
+        <CommandString>vorwärts</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ForwardKey>
     <!-- rückwärts -->
     <BackwardKey>
-        rückwärts
+        <CommandString>rückwärts</CommandString>
+        <ReplyAccept></ReplyAccept>
     </BackwardKey>
 
     <!-- Mit den nachfolgenden 9 Kommandos steuern sie das "Gaspedal" oder genauer den Schub und den Umkehrschub in Stufen. -->
     <!-- Volle Kraft zurück -->
     <SetSpeedMinus100>
-        Volle Kraft zurück
+        <CommandString>Volle Kraft zurück</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeedMinus100>
     <!-- Dreiviertel Kraft zurück -->
     <SetSpeedMinus75>
-        Dreiviertel Kraft zurück
+        <CommandString>Dreiviertel Kraft zurück</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeedMinus75>
     <!-- Halbe Kraft zurück -->
     <SetSpeedMinus50>
-        Halbe Kraft zurück
+        <CommandString>Halbe Kraft zurück</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeedMinus50>
     <!-- Viertel Kraft zurück -->
     <SetSpeedMinus25>
-        Viertel Kraft zurück
+        <CommandString>Viertel Kraft zurück</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeedMinus25>
     <!-- Alle Maschinen stop -->
     <SetSpeedZero>
-        Alle Maschinen stop
+        <CommandString>Alle Maschinen stop</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeedZero>
     <!-- Viertel Kraft voraus -->
     <SetSpeed25>
-        Viertel Kraft voraus
+        <CommandString>Viertel Kraft voraus</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeed25>
     <!-- Halbe Kraft voraus -->
     <SetSpeed50>
-        Halbe Kraft voraus
+        <CommandString>Halbe Kraft voraus</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeed50>
     <!-- Dreiviertel Kraft voraus -->
     <SetSpeed75>
-        Dreiviertel Kraft voraus
+        <CommandString>Dreiviertel Kraft voraus</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeed75>
     <!-- Volle Kraft voraus -->
     <SetSpeed100>
-        Volle Kraft voraus
+        <CommandString>Volle Kraft voraus</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SetSpeed100>
 
     <!-- Flugassistent ein und ausschalten-->
     <ToggleFlightAssist>
-        Flugassistent
+        <CommandString>Flugassistent</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ToggleFlightAssist>
 
     <!-- BoostJuice, der Saft sei mit dir -->
     <UseBoostJuice>
-        Nachbrenner
+        <CommandString>Nachbrenner</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UseBoostJuice>
     <!-- Impuls Warp Kombination. Name ist Programm. Hier ist die Besonderheit zu sehen wenn man englische Begriffe in deutscher Spracherkennung nutzt, muss man etwas erfinderisch werden was die Schreibweise angeht. Dann versteht man sich besser mit seinem Computer. -->
     <HyperSuperCombination>
-        Impuls Woarp Kombination
+        <CommandString>Impuls Woarp Kombination</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HyperSuperCombination>
     <!-- Impulsantrieb -->
     <Supercruise>
-        Impulsantrieb
+        <CommandString>Impulsantrieb</CommandString>
+        <ReplyAccept></ReplyAccept>
     </Supercruise>
     <!-- Woarpantrieb;Hyperraumantrieb -->
     <Hyperspace>
-        Woarpantrieb;Hyperraumantrieb
+        <CommandString>Woarpantrieb;Hyperraumantrieb</CommandString>
+        <ReplyAccept></ReplyAccept>
     </Hyperspace>
     <!-- Rotationskorrektur -->
     <DisableRotationCorrectToggle>
-        Rotationskorrektur
+        <CommandString>Rotationskorrektur</CommandString>
+        <ReplyAccept></ReplyAccept>
     </DisableRotationCorrectToggle>
 
     <!-- Ziel anvisieren -->
     <SelectTarget>
-        Ziel anvisieren
+        <CommandString>Ziel anvisieren</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SelectTarget>
     <!-- nächstes Ziel -->
     <CycleNextTarget>
-        nächstes Ziel
+        <CommandString>nächstes Ziel</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CycleNextTarget>
     <!-- vorheriges Ziel -->
     <CyclePreviousTarget>
-        vorheriges Ziel
+        <CommandString>vorheriges Ziel</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CyclePreviousTarget>
     <!-- Bedrohung anvisieren -->
     <SelectHighestThreat>
-        Bedrohung anvisieren
+        <CommandString>Bedrohung anvisieren</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SelectHighestThreat>
     <!-- nächste Bedrohung -->
     <CycleNextHostileTarget>
-        nächste Bedrohung
+        <CommandString>nächste Bedrohung</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CycleNextHostileTarget>
     <!-- vorherige Bedrohung -->
     <CyclePreviousHostileTarget>
-        vorherige Bedrohung
+        <CommandString>vorherige Bedrohung</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CyclePreviousHostileTarget>
     <!-- Ziel 0 -->
     <TargetWingman0>
-        Ziel 0
+        <CommandString>Ziel 0</CommandString>
+        <ReplyAccept></ReplyAccept>
     </TargetWingman0>
     <!-- Ziel 1 -->
     <TargetWingman1>
-        Ziel 1
+        <CommandString>Ziel 1</CommandString>
+        <ReplyAccept></ReplyAccept>
     </TargetWingman1>
     <!-- Ziel 2 -->
     <TargetWingman2>
-        Ziel 2
+        <CommandString>Ziel 2</CommandString>
+        <ReplyAccept></ReplyAccept>
     </TargetWingman2>
     <!-- Das Ziel des eigenen Ziels wird anvisiert -->
     <SelectTargetsTarget>
-        Wer ist das Ziel?;Sein Ziel anvisieren;Auf wen hat er es abgesehen;Wen hat er im Visier
+        <CommandString>Suche Sein Ziel?;Sein Ziel anvisieren;Auf wen hat er es abgesehen;Wen hat er im Visier</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SelectTargetsTarget>
     <!-- Flügelsperre -->
     <WingNavLock>
-        Flügelsperre
+        <CommandString>Flügelsperre</CommandString>
+        <ReplyAccept></ReplyAccept>
     </WingNavLock>
 
     <!-- Subsystem wechseln -->
     <CycleNextSubsystem>
-        Subsystem wechseln
+        <CommandString>Subsystem wechseln</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CycleNextSubsystem>
     <!-- Subsystem zurück wechseln -->
     <CyclePreviousSubsystem>
-        Subsystem zurück wechseln
+        <CommandString>Subsystem zurück wechseln</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CyclePreviousSubsystem>
     <!-- Ziele auf nächstes Routen System -->
     <TargetNextRouteSystem>
-        Ziele auf nächstes Routen System
+        <CommandString>Ziele auf nächstes Routen System</CommandString>
+        <ReplyAccept></ReplyAccept>
     </TargetNextRouteSystem>
 
     <!-- Feuern, Feuer eröffnen bzw. die Primärwaffe benutzen -->
     <PrimaryFire>
-        Feuer;Feuer eröffnen
+        <CommandString>Feuer;Feuer eröffnen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </PrimaryFire>
     <!-- Sekundärfeuer, Sekundärwaffe benutzen -->
     <SecondaryFire>
-        Sekundärfeuer;Sekundärfeuer eröffnen;Torpedos abfeuern
+        <CommandString>Sekundärfeuer;Sekundärfeuer eröffnen;Torpedos abfeuern</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SecondaryFire>
     <!-- Waffengruppe wechseln -->
     <CycleFireGroupNext>
-        Waffen wechseln
+        <CommandString>Waffen wechseln</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CycleFireGroupNext>
     <!-- Waffengruppe zurück wechseln -->
     <CycleFireGroupPrevious>
-        Waffen zurück wechseln
+        <CommandString>Waffen zurück wechseln</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CycleFireGroupPrevious>
 
     <!-- Hardpoint -->
     <DeployHardpointToggle>
-        Fixpunkt
+        <CommandString>Fixpunkt</CommandString>
+        <ReplyAccept></ReplyAccept>
     </DeployHardpointToggle>
     <!-- ButtonUpInput -->
     <ToggleButtonUpInput>
-        Battn ap Input
+        <CommandString>Battn ap Input</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ToggleButtonUpInput>
     <!-- DeployHeatSink -->
     <DeployHeatSink>
-        Kühlkörper
+        <CommandString>Kühlkörper</CommandString>
+        <ReplyAccept></ReplyAccept>
     </DeployHeatSink>
     <!-- Die Scheinwerfer des Schiffs ein- und ausschalten -->
     <ShipSpotLightToggle>
-        Licht
+        <CommandString>Licht</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ShipSpotLightToggle>
 
     <!-- Analoge Eingabe für den darzustellenden Radarbereich -->
     <RadarRangeAxis>
-        Radarweite Achse
+        <CommandString>Radarweite Achse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RadarRangeAxis>
     <!-- Radarbereich erweitern -->
     <RadarIncreaseRange>
-        Radar erweitern
+        <CommandString>Radar erweitern</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RadarIncreaseRange>
     <!-- Radarbereich verringern -->
     <RadarDecreaseRange>
-        Radar verringern
+        <CommandString>Radar verringern</CommandString>
+        <ReplyAccept></ReplyAccept>
     </RadarDecreaseRange>
 
     <!-- Die Energie wird einen Punkt mehr auf die Schilde gelegt-->
     <IncreaseEnginesPower>
-        Energie auf Schilde;mehr Energie auf Schilde;noch mehr Energie auf Schilde
+        <CommandString>Energie auf Schilde;mehr Energie auf Schilde;noch mehr Energie auf Schilde</CommandString>
+        <ReplyAccept></ReplyAccept>
     </IncreaseEnginesPower>
     <!-- Die Energie wird einen Punkt mehr auf das Waffensystem gelegt -->
     <IncreaseWeaponsPower>
-        Energie auf Waffensystem;mehr Energie auf Waffensystem;noch mehr Energie auf Waffensystem
+        <CommandString>Energie auf Waffensystem;mehr Energie auf Waffensystem;noch mehr Energie auf Waffensystem</CommandString>
+        <ReplyAccept></ReplyAccept>
     </IncreaseWeaponsPower>
     <!-- Die Energie wird einen Punkt mehr auf den Antrieb und Bordsysteme gelegt -->
     <IncreaseSystemsPower> 
-        Energie auf die Maschinen;mehr Energie auf die Maschinen;noch mehr Energie auf die Maschinen
+        <CommandString>Energie auf die Maschinen;mehr Energie auf die Maschinen;noch mehr Energie auf die Maschinen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </IncreaseSystemsPower>
     <!-- Energie wird gleichmäßig auf allen Systemen verteilt -->
     <ResetPowerDistribution>
-        Energie aufteilen
+        <CommandString>Energie aufteilen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ResetPowerDistribution>
 
     <!-- Oculus recenter. Ähnlich wie beim Mausreset muss man in VR auch manchmal seinen Blickwinkel neu kalibrieren -->
     <OculusReset>
-        Oculus
+        <CommandString>Oculus</CommandString>
+        <ReplyAccept></ReplyAccept>
     </OculusReset>
 
     <!-- Frachtraum öffnen bzw. schließen -->
     <ToggleCargoScoop>
-        Frachtraum
+        <CommandString>Frachtraum</CommandString>
+        <ReplyAccept></ReplyAccept>
     </ToggleCargoScoop>
     <!-- Frachtraum leeren -->
     <EjectAllCargo>
-        Frachtraum leeren
+        <CommandString>Frachtraum leeren</CommandString>
+        <ReplyAccept></ReplyAccept>
     </EjectAllCargo>
     <!-- Fahrwerk ein bzw. ausfahren -->
     <LandingGearToggle>
-        Fahrwerk
+        <CommandString>Fahrwerk</CommandString>
+        <ReplyAccept></ReplyAccept>
     </LandingGearToggle>
 
     <!-- Mikrofon stumm schalten -->
     <MicrophoneMute>
-        Mikrofon stumm schalten 
+        <CommandString>Mikrofon stumm schalten </CommandString>
+        <ReplyAccept></ReplyAccept>
     </MicrophoneMute>
     <!-- Schildzelle benutzen -->
     <UseShieldCell>
-        Schildzelle benutzen
+        <CommandString>Schildzelle benutzen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UseShieldCell>
     <!-- Täuschkörper abfeuern andere sagen dazu Gegenmaßnahmen-->
     <FireChaffLauncher>
-        Täuschkörper
+        <CommandString>Täuschkörper</CommandString>
+        <ReplyAccept></ReplyAccept>
     </FireChaffLauncher>
 
     <!-- Foto -->
     <PhotoCameraToggle>
-        Foto
+        <CommandString>Foto</CommandString>
+        <ReplyAccept></ReplyAccept>
     </PhotoCameraToggle>
 
     <!-- Konsole -->
     <UIFocus>
-        Konsole
+        <CommandString>Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UIFocus>
     <!-- Linke Konsole -->
     <FocusLeftPanel>
-        Linke Konsole
+        <CommandString>Linke Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </FocusLeftPanel>
     <!-- Rechte Konsole -->
     <FocusRightPanel>
-        Rechte Konsole
+        <CommandString>Rechte Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </FocusRightPanel>
     <!-- Radar Konsole -->
     <FocusRadarPanel>
-        Radar Konsole
+        <CommandString>Radar Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </FocusRadarPanel>
     <!-- Kurznachrichten Konsole -->
     <QuickCommsPanel>
-        Kurznachrichten Konsole
+        <CommandString>Kurznachrichten Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </QuickCommsPanel>
     <!-- Nachrichten Konsole -->
     <FocusCommsPanel>
-        Nachrichten Konsole
+        <CommandString>Nachrichten Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </FocusCommsPanel>
     <!-- Galaxie Karte -->
     <GalaxyMapOpen>
-        Galaxie Karte
+        <CommandString>Galaxie Karte</CommandString>
+        <ReplyAccept></ReplyAccept>
     </GalaxyMapOpen>
     <!-- Sternensystem Karte -->
     <SystemMapOpen>
-        Sternensystem Karte
+        <CommandString>Sternensystem Karte</CommandString>
+        <ReplyAccept></ReplyAccept>
     </SystemMapOpen>
     <!-- Helmsteuerung -->
     <HeadLookToggle>
-        Helmsteuerung
+        <CommandString>Helmsteuerung</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookToggle>
     <!-- Pause -->
     <Pause>
-        Pause
+        <CommandString>Pause</CommandString>
+        <ReplyAccept></ReplyAccept>
     </Pause>
     <!-- hoch -->
     <UI_Up>
-        hoch
+        <CommandString>hoch</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UI_Up>
     <!-- runter -->
     <UI_Down>
-        runter
+        <CommandString>runter</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UI_Down>
     <!-- links -->
     <UI_Left>
-        links
+        <CommandString>links</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UI_Left>
     <!-- rechts -->
     <UI_Right>
-        rechts
+        <CommandString>rechts</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UI_Right>
     <!-- auswählen -->
     <UI_Select>
-        auswählen
+        <CommandString>auswählen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UI_Select>
     <!-- zurück -->
     <UI_Back>
-        zurück
+        <CommandString>zurück</CommandString>
+        <ReplyAccept></ReplyAccept>
     </UI_Back>
     <!-- nächste Konsole -->
     <CycleNextPanel>
-        nächste Konsole
+        <CommandString>nächste Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CycleNextPanel>
     <!-- vorherige Konsole -->
     <CyclePreviousPanel>
-        vorherige Konsole
+        <CommandString>vorherige Konsole</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CyclePreviousPanel>
  
     <!-- Helmsteuerung zurücksetzen -->
     <HeadLookReset>
-        Helmsteuerung zurücksetzen
+        <CommandString>Helmsteuerung zurücksetzen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookReset>
     <!-- hoch schauen -->
     <HeadLookPitchUp>
-        hoch schauen
+        <CommandString>hoch schauen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookPitchUp>
     <!-- runter schauen -->
     <HeadLookPitchDown>
-        runter schauen
+        <CommandString>runter schauen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookPitchDown>
     <!-- Kopfnickachse -->
     <HeadLookPitchAxisRaw>
-        Kopfnickachse
+        <CommandString>Kopfnickachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookPitchAxisRaw>
     <!-- links schauen -->
     <HeadLookYawLeft>
-        links schauen
+        <CommandString>links schauen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookYawLeft>
     <!-- rechts schauen -->
     <HeadLookYawRight>
-        rechts schauen
+        <CommandString>rechts schauen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookYawRight>
     <!-- Kopfdrehachse -->
     <HeadLookYawAxis>
-        Kopfdrehachse
+        <CommandString>Kopfdrehachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </HeadLookYawAxis>
 
     <!-- Kameranickachse -->
     <CamPitchAxis>
-        Kameranickachse
+        <CommandString>Kameranickachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamPitchAxis>
     <!-- Kamera nach oben -->
     <CamPitchUp>
-        Kamera nach oben
+        <CommandString>Kamera nach oben</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamPitchUp>
     <!-- Kamera nach unten -->
     <CamPitchDown>
-        Kamera nach unten
+        <CommandString>Kamera nach unten</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamPitchDown>
     <!-- Kameradrehachse -->
     <CamYawAxis>
-        Kameradrehachse
+        <CommandString>Kameradrehachse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamYawAxis>
     <!-- Kamera nach links drehen -->
     <CamYawLeft>
-        Kamera nach links drehen
+        <CommandString>Kamera nach links drehen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamYawLeft>
     <!-- Kamera nach rechts drehen -->
     <CamYawRight>
-        Kamera nach rechts drehen
+        <CommandString>Kamera nach rechts drehen</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamYawRight>
     <!-- Kamera Y Achse -->
     <CamTranslateYAxis>
-        Kamera Y Achse
+        <CommandString>Kamera Y Achse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateYAxis>
     <!-- Kamera nach vorn -->
     <CamTranslateForward>
-        Kamera nach vorn
+        <CommandString>Kamera nach vorn</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateForward>
     <!-- Kamera nach hinten -->
     <CamTranslateBackward>
-        Kamera nach hinten
+        <CommandString>Kamera nach hinten</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateBackward>
     <!-- Kamera X Achse -->
     <CamTranslateXAxis>
-        Kamera X Achse
+        <CommandString>Kamera X Achse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateXAxis>
     <!-- Kamera nach links schieben -->
     <CamTranslateLeft>
-        Kamera nach links schieben
+        <CommandString>Kamera nach links schieben</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateLeft>
     <!-- Kamera nach rechts schieben -->
     <CamTranslateRight>
-        Kamera nach rechts schieben
+        <CommandString>Kamera nach rechts schieben</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateRight>
     <!-- Kamera Z Achse -->
     <CamTranslateZAxis>
-        Kamera Z Achse
+        <CommandString>Kamera Z Achse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateZAxis>
     <!-- Kamera hoch schieben -->
     <CamTranslateUp>
-        Kamera hoch schieben
+        <CommandString>Kamera hoch schieben</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateUp>
     <!-- Kamera runter schieben -->
     <CamTranslateDown>
-        Kamera runter schieben
+        <CommandString>Kamera runter schieben</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateDown>
     <!-- Kamera Zoom Achse -->
     <CamZoomAxis>
-        Kamera Zoom Achse
+        <CommandString>Kamera Zoom Achse</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamZoomAxis>
     <!-- Kamera näher ran -->
     <CamZoomIn>
-        Kamera näher ran
+        <CommandString>Kamera näher ran</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamZoomIn>
     <!-- Kamera weiter weg -->
     <CamZoomOut>
-        Kamera weiter weg
+        <CommandString>Kamera weiter weg</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamZoomOut>
     <!-- Kamera Z halten -->
      <CamTranslateZHold>
-        Kamera Z halten
+        <CommandString>Kamera Z halten</CommandString>
+        <ReplyAccept></ReplyAccept>
     </CamTranslateZHold>
 </root>

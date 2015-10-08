@@ -38,7 +38,7 @@ def printError(message):
 def printBoldError(message):
     print(bcolors.FAIL,bcolors.BOLD, "\tError:\t",message,bcolors.ENDC)
 
-def createVoiceAttackCommand( commandname, keycode, context):
+def createVoiceAttackCommand( commandname, keycode, command, reply):
     "Creates a new standard command"
     commandNodeFile = ET.parse(parsePath(config["files"]["commandtemplate"]))
     commandNode = commandNodeFile.getroot()
@@ -46,13 +46,12 @@ def createVoiceAttackCommand( commandname, keycode, context):
 
     # When i say...
     commandNameNode=commandNode.findall("./CommandString")
-    commandNameNode[0].text=context
+    commandNameNode[0].text=command
     commandNameNodeId=commandNode.findall("./Id")
     commandNameNodeId[0].text=str(uuid.uuid4())
     # ..you say...
     sayAction=commandActionNode[1].findall("./Context")
-    reply=context.split(";")
-    sayAction[0].text="OK, "+reply[0]+";"+"Verstanden, "+reply[0]
+    sayAction[0].text="OK, "+reply+";"+"Verstanden, "+reply
     sayId=commandActionNode[1].findall("./Id")
     sayId[0].text=str(uuid.uuid4())
     # Description of the voicecommand will be the
@@ -70,7 +69,33 @@ def createVoiceAttackCommand( commandname, keycode, context):
     keyId[0].text=str(uuid.uuid4())
     return commandNode
 
-def getContext(vaMapping,action):
+def getReplyAcceptString(vaMapping,action):
+    # Elite has different keymappings for open space and landing situations.
+    # But the voicecommands will always be the same. You will always say "forward" if you want your ship to move forward.
+    # We will map the "normal" voicecommand to the "landing" key.
+    if action[-8:] == "_Landing":
+        action = action[:-8]
+    try:        
+        # device = map["Device"]
+        actionNode = vaMapping.find(action)
+        replyNode = actionNode.find("ReplyAccept")
+        reply = replyNode.text
+        if reply is None:
+            # printWarning("Voicecommand:ReplyAccept not set for '{0}'! Creating from CommanString.".format(action))
+            # remove tabs and newlines
+            replyNode = actionNode.find("CommandString")
+            reply = replyNode.text
+            reply = reply.replace("\t","")
+            reply = reply.replace("\n","")
+            reply = reply.strip(" ")
+            reply = reply.split(";")
+            reply = reply[0]
+    except:
+        printError("Voicecommand not set for '{0}'! Edit binds.xml".format(action))
+        reply = None
+    return reply
+
+def getCommandString(vaMapping,action):
     # Elite has different keymappings for open space and landing situations.
     # But the voicecommands will always be the same. You will always say "forward" if you want your ship to move forward.
     # We will map the "normal" voicecommand to the "landing" key.
@@ -90,10 +115,10 @@ def getContext(vaMapping,action):
         command = None
     return command
 
-def getKeycode(keycodes,keyname):
+def getKeycode(device,keycodes,keyname):
     keyNode = keycodes.find(keyname)
     if keyNode is None:
-        printError("Keyname not found:\t{0}".format(keyname))
+        printError("keycodes:\tNot found:\t{1} for device '{0}'".format(device,keyname))
         keyCode=None
     else:
         keyAttribs = keyNode.attrib
@@ -161,14 +186,16 @@ for keyconfig in eliteConfig:
     # when its a button
     if isAButton is True:
         # Get the voicecommand(context)
-        commandString = getContext(vaMapping,action)
+        commandString = getCommandString(vaMapping,action)
+        replyAcceptString = getReplyAcceptString(vaMapping,action)
         keyName = getKey(keyNode)
         if keyName is "":
-            printWarning("No key configured:\t{0}".format(action))
+            printWarning("eliteconfig:\tKey not set:\t{0}".format(action))
+            #setRandomKey(keyNode)
         else:
-            keyCode = getKeycode(keycodes, keyName)
+            keyCode = getKeycode(device, keycodes, keyName)
         if keyCode is not None:        
-            commandNode = createVoiceAttackCommand(action, keyCode, commandString)
+            commandNode = createVoiceAttackCommand(action, keyCode, commandString, replyAcceptString)
             commands.append(commandNode)
 
 

@@ -10,7 +10,10 @@
         <CommandString>Oculus</CommandString>
         <ReplyAccept></ReplyAccept>
     </OculusReset>
-
+    <ShowPGScoreSummaryInput>
+        <CommandString>Zeige Punktestand</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </ShowPGScoreSummaryInput>
 
     <!-- Gierachse. Wie im Auto lenkt es die Nase des Fahrzeugs nach links oder rechts-->
     <!-- nach links ziehen -->

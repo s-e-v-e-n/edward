@@ -54,7 +54,9 @@
 <Key_LeftAlt code="164"/>
 <Key_LeftControl code="162"/>
 <Key_LeftShift code="160"/>
-<Key_ß code="219"/>
+<Key_RightShift code="161"/>
+<Key_RightControl code="163"/>
+<Key_RightAlt code="165"/>
 <Key_F1 code="112"/>
 <Key_F2 code="113"/>
 <Key_F3 code="114"/>
@@ -69,15 +71,39 @@
 <Key_F12 code="123"/>
 <Key_Print code="44"/>
 <Key_Insert code="45"/>
-<Key_HOCHKOMMA code="221"/>
 <Key_Plus code="187"/>
 <Key_Hash code="191"/>
 <Key_ä code="222"/>
 <Key_ö code="192"/>
 <Key_ü code="186"/>
 <Key_Minus code="189"/>
-<Key_Point code="190"/>
-<Key_Komma code="188"/>
-<Key_kleiner code="226"/>
-<Key_dach code="220"/>
+<Key_Numpad_1 code="97"/>
+<Key_Numpad_2 code="98"/>
+<Key_Numpad_3 code="99"/>
+<Key_Numpad_4 code="100"/>
+<Key_Numpad_5 code="101"/>
+<Key_Numpad_6 code="102"/>
+<Key_Numpad_7 code="103"/>
+<Key_Numpad_8 code="104"/>
+<Key_Numpad_9 code="105"/>
+<Key_Numpad_0 code="96"/>
+<Key_Numpad_Add code="107"/>
+<Key_Numpad_Subtract code="109"/>
+<Key_Numpad_Comma code="110"/>
+<Key_Numpad_Divide code="106"/>
+<Key_Numpad_Multiply code="111"/>
+<Key_LessThan code="226"/>
+<Key_Comma code="188"/>
+<Key_Period code="190"/>
+<Key_Circumflex code="220"/>
+<Key_Acute code="221"/>
 </root>
+
+
+
+
+
+
+
+
+

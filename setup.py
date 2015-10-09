@@ -9,7 +9,7 @@ if len(sys.argv) == 1:
 class Target:
     def __init__(self, **kw):
         self.__dict__.update(kw)
-        self.version = "0.1.1"
+        self.version = "0.1.2"
         self.company_name = "SEVENGEAR"
         self.copyright = "Copyright (c) 2015 Sven Schmid."
         self.name = "edvard"

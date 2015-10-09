@@ -47,9 +47,6 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-
 # Sphinx documentation
 docs/_build/
 
@@ -57,5 +54,4 @@ docs/_build/
 target/
 
 edvard/
-dist/
 edvard.vap

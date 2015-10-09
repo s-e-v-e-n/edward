@@ -12,7 +12,6 @@
             <Duration>0.1</Duration>
             <Delay>0</Delay>
             <KeyCodes>
-                <unsignedShort>01</unsignedShort>
             </KeyCodes>
             <X>0</X>
             <Y>0</Y>

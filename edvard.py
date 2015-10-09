@@ -38,35 +38,50 @@ def printError(message):
 def printBoldError(message):
     print(bcolors.FAIL,bcolors.BOLD, "\tError:\t",message,bcolors.ENDC)
 
-def createVoiceAttackCommand( commandname, keycode, command, reply):
+def createVoiceAttackCommand( commandname, actionKeyCodes, command, reply):
     "Creates a new standard command"
     commandNodeFile = ET.parse(parsePath(config["files"]["commandtemplate"]))
     commandNode = commandNodeFile.getroot()
-    commandActionNode=commandNode.findall("./ActionSequence/CommandAction")
-
-    # When i say...
-    commandNameNode=commandNode.findall("./CommandString")
-    commandNameNode[0].text=command
-    commandNameNodeId=commandNode.findall("./Id")
-    commandNameNodeId[0].text=str(uuid.uuid4())
-    # ..you say...
-    sayAction=commandActionNode[1].findall("./Context")
-    sayAction[0].text="OK, "+reply+";"+"Verstanden, "+reply
-    sayId=commandActionNode[1].findall("./Id")
-    sayId[0].text=str(uuid.uuid4())
     # Description of the voicecommand will be the
     # action name from custom.binds of Elite
-    descriptionNameNode=commandNode.find("Description")
-    if descriptionNameNode is None:
-        descriptionNameNode = ET.Element("Description")
+    voiceActionDescription=commandNode.find("Description")
+    if voiceActionDescription is None:
+        voiceActionDescription = ET.Element("Description")
     else:
-        descriptionNameNode.text = commandname
-        ET.SubElement(commandNode, descriptionNameNode)    
+        voiceActionDescription.text = commandname
+        ET.SubElement(commandNode, voiceActionDescription)    
+    # When i say...
+    voiceAction=commandNode.find("CommandString")
+    voiceAction.text=command
+    voiceActionId=commandNode.find("Id")
+    voiceActionId.text=str(uuid.uuid4())
 
-    keyAction=commandActionNode[0].findall("./KeyCodes/unsignedShort")
-    keyAction[0].text=keycode
-    keyId=commandActionNode[0].findall("./Id")
-    keyId[0].text=str(uuid.uuid4())
+    # ..you say...
+    commandActionNodes=commandNode.findall("./ActionSequence/CommandAction")
+    for commandAction in commandActionNodes:
+        actionType=commandAction.find("ActionType")
+        actionType = getElementText(actionType)
+        if actionType == "PressKey":
+            keyCodesNode=commandAction.find("KeyCodes")
+            for actionKeyCode in actionKeyCodes:
+                if actionKeyCode is not None:
+                    unsignedShortNode = ET.Element("unsignedShort")
+                    unsignedShortNode.text=actionKeyCode
+                    keyCodesNode.append(unsignedShortNode)
+            keyId=commandAction.find("Id")
+            keyId.text=str(uuid.uuid4())
+        elif actionType == "Say":
+            if reply is None:
+                reply = command.split(";")
+                reply = reply[0]
+            sayAction=commandAction.find("Context")
+            sayAction.text="OK, "+reply+";"+"Verstanden, "+reply
+            sayId=commandAction.find("Id")
+            sayId.text=str(uuid.uuid4())
+        elif actionType == "MouseAction":
+            print("XXX: MouseAction")
+        else:
+            printError("Couldn't create Action")
     return commandNode
 
 def getReplyAcceptString(vaMapping,action):
@@ -79,21 +94,17 @@ def getReplyAcceptString(vaMapping,action):
         # device = map["Device"]
         actionNode = vaMapping.find(action)
         replyNode = actionNode.find("ReplyAccept")
-        reply = replyNode.text
-        if reply is None:
-            # printWarning("Voicecommand:ReplyAccept not set for '{0}'! Creating from CommanString.".format(action))
-            # remove tabs and newlines
-            replyNode = actionNode.find("CommandString")
-            reply = replyNode.text
-            reply = reply.replace("\t","")
-            reply = reply.replace("\n","")
-            reply = reply.strip(" ")
-            reply = reply.split(";")
-            reply = reply[0]
+        reply = getElementText(reply)
     except:
-        printError("commands:\tVoicecommand not set for '{0}'!".format(action))
         reply = None
     return reply
+
+def getElementText(elementNode):
+    elementNode = elementNode.text
+    elementNode = elementNode.replace("\t","")
+    elementNode = elementNode.replace("\n","")
+    elementNode = elementNode.strip(" ")
+    return elementNode
 
 def getCommandString(vaMapping,action):
     # Elite has different keymappings for open space and landing situations.
@@ -106,10 +117,7 @@ def getCommandString(vaMapping,action):
         actionNode = vaMapping.find(action)
         command = actionNode.find("CommandString")
         # remove tabs and newlines
-        command = command.text
-        command = command.replace("\t","")
-        command = command.replace("\n","")
-        command = command.strip(" ")
+        command = getElementText(command)
     except:
         printError("commands:\tVoicecommand not set for '{0}'!".format(action))
         command = None
@@ -170,7 +178,7 @@ for keyconfig in eliteConfig:
     action = keyconfig.tag
     # get the primary button mapping from the elite config
     keyNode = keyconfig.find("Primary")
-    keyCode= None
+    actionKeyCodes= []
     isAButton = False
     isKeyboard = False
     isGamepad = False
@@ -188,14 +196,19 @@ for keyconfig in eliteConfig:
         # Get the voicecommand(context)
         commandString = getCommandString(vaMapping,action)
         replyAcceptString = getReplyAcceptString(vaMapping,action)
-        keyName = getKey(keyNode)
+        keyName = getKey(keyNode)         
         if keyName is "":
             printWarning("eliteconfig:\tKey not set:\t{0}".format(action))
             #setRandomKey(keyNode)
         else:
-            keyCode = getKeycode(device, keycodes, keyName)
-        if keyCode is not None:        
-            commandNode = createVoiceAttackCommand(action, keyCode, commandString, replyAcceptString)
+            modifiers = keyNode.findall("./Modifier")
+            if modifiers is not None:
+                for modifierKey in modifiers:
+                    modifierKeyName = getKey(modifierKey)
+                    actionKeyCodes.append(getKeycode(device, keycodes, modifierKeyName))       
+            actionKeyCodes.append(getKeycode(device, keycodes, keyName))
+        if len(actionKeyCodes)>0:
+            commandNode = createVoiceAttackCommand(action, actionKeyCodes, commandString, replyAcceptString)
             commands.append(commandNode)
 
 

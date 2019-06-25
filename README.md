@@ -1,7 +1,7 @@
 
 
-Create a Voice Attack Profile by using the Elite Dangerous Custom key binds.
-============================================================================
+Elite Dangerous Voice Attack Relation Designer
+==============================================
 
 
 What?

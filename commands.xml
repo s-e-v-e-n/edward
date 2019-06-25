@@ -572,4 +572,137 @@
         <CommandString>Kamera Z halten</CommandString>
         <ReplyAccept></ReplyAccept>
     </CamTranslateZHold>
+
+    <!-- Update 3.0 -->
+
+    <UseAlternateFlightValuesToggle>
+        <CommandString>Alternative Steuerung</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </UseAlternateFlightValuesToggle>
+    <OrbitLinesToggle>
+        <CommandString>Orbitlinien</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </OrbitLinesToggle>
+    <HMDReset>
+        <CommandString>Optik korrigieren</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </HMDReset>
+
+    <ChargeECM>
+        <CommandString>Lade ECM</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </ChargeECM>
+
+    <WeaponColourToggle>
+        <CommandString>Waffenfarbe</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </WeaponColourToggle>
+
+    <EngineColourToggle>
+        <CommandString>Antriebfarbe</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </EngineColourToggle>
+
+    <NightVisionToggle>
+        <CommandString>Nachtsicht</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </NightVisionToggle>
+
+    <FriendsMenu>
+        <CommandString>Freunde Menü</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </FriendsMenu>
+
+    <OpenCodexGoToDiscovery>
+        <CommandString>Open Codex GoTo Discovery</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </OpenCodexGoToDiscovery>
+
+    <PlayerHUDModeToggle>
+        <CommandString>Hedappdispläi Modus</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </PlayerHUDModeToggle>
+
+    <ExplorationFSSEnter>
+        <CommandString>Erkundung</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </ExplorationFSSEnter>
+
+    <UI_Toggle>
+        <CommandString>Juserinterfäis</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </UI_Toggle>
+
+    <CycleNextPage>
+        <CommandString>Nächste Seite</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </CycleNextPage>
+
+    <CyclePreviousPage>
+        <CommandString>Vorherige Seite</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </CyclePreviousPage>
+
+    <GalaxyMapHome>
+        <CommandString>Galaxiekarte Startpunkt</CommandString>
+        <ReplyAccept></ReplyAccept>
+    </GalaxyMapHome>
+
+
+<ToggleDriveAssist>
+    <CommandString>ToggleDriveAssist</CommandString>
+    <ReplyAccept></ReplyAccept>
+</ToggleDriveAssist>
+<SteerLeftButton>
+    <CommandString>SteerLeftButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</SteerLeftButton>
+<SteerRightButton>
+    <CommandString>SteerRightButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</SteerRightButton>
+<BuggyRollLeftButton>
+    <CommandString>BuggyRollLeftButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</BuggyRollLeftButton>
+<BuggyRollRightButton>
+    <CommandString>BuggyRollRightButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</BuggyRollRightButton>
+<BuggyPitchUpButton>
+    <CommandString>BuggyPitchUpButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</BuggyPitchUpButton>
+<BuggyPitchDownButton>
+    <CommandString>BuggyPitchDownButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</BuggyPitchDownButton>
+<VerticalThrustersButton>
+    <CommandString>VerticalThrustersButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</VerticalThrustersButton>
+
+<BuggyPrimaryFireButton>
+    <CommandString>BuggyPrimaryFireButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</BuggyPrimaryFireButton>
+
+<BuggySecondaryFireButton>
+    <CommandString>BuggySecondaryFireButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</BuggySecondaryFireButton>
+
+<AutoBreakBuggyButton>
+    <CommandString>AutoBreakBuggyButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</AutoBreakBuggyButton>
+<HeadlightsBuggyButton>
+    <CommandString>HeadlightsBuggyButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</HeadlightsBuggyButton>
+<ToggleBuggyTurretButton>
+    <CommandString>ToggleBuggyTurretButton</CommandString>
+    <ReplyAccept></ReplyAccept>
+</ToggleBuggyTurretButton>
+
 </root>

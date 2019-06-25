@@ -8,36 +8,6 @@ import configparser
 config = configparser.RawConfigParser()
 config.read("config.ini")
 
-# class bcolors:
-#     HEADER = '\033[95m'
-#     OKBLUE = '\033[94m'
-#     OKGREEN = '\033[92m'
-#     WARNING = '\033[93m'
-#     FAIL = '\033[91m'
-#     ENDC = '\033[0m'
-#     BOLD = '\033[1m'
-#     UNDERLINE = '\033[4m'
-
-class bcolors:
-    HEADER = ''
-    OKBLUE = ''
-    OKGREEN = ''
-    WARNING = ''
-    FAIL = ''
-    ENDC = ''
-    BOLD = ''
-    UNDERLINE = ''
-
-def printWarning(message):
-
-    print(bcolors.WARNING, "\tWarning:\t",message,bcolors.ENDC)
-
-def printError(message):
-    print(bcolors.FAIL, "\tError  :\t",message,bcolors.ENDC)
-
-def printBoldError(message):
-    print(bcolors.FAIL,bcolors.BOLD, "\tError:\t",message,bcolors.ENDC)
-
 def createVoiceAttackCommand( commandname, actionKeyCodes, command, reply):
     "Creates a new standard command"
     commandNodeFile = ET.parse(parsePath(config["files"]["commandtemplate"]))
@@ -79,9 +49,9 @@ def createVoiceAttackCommand( commandname, actionKeyCodes, command, reply):
             sayId=commandAction.find("Id")
             sayId.text=str(uuid.uuid4())
         elif actionType == "MouseAction":
-            print("XXX: MouseAction")
+            print("MouseAction not implemented yet")
         else:
-            printError("Couldn't create Action")
+            print("Couldn't create Action")
     return commandNode
 
 def getReplyAcceptString(vaMapping,action):
@@ -119,14 +89,14 @@ def getCommandString(vaMapping,action):
         # remove tabs and newlines
         command = getElementText(command)
     except:
-        printError("commands:\tVoicecommand not set for '{0}'!".format(action))
+        print("Edvard: No CommandString for '{0}'".format(action))
         command = None
     return command
 
 def getKeycode(device,keycodes,keyname):
     keyNode = keycodes.find(keyname)
     if keyNode is None:
-        printError("keycodes:\tNot found:\t{1} for device '{0}'".format(device,keyname))
+        print("Edvard: Keycode not found:\t{1} for device '{0}'".format(device,keyname))
         keyCode=None
     else:
         keyAttribs = keyNode.attrib
@@ -143,6 +113,40 @@ def getDevice(element):
     device = deviceNode["Device"]
     return device
 
+def getKeyboardKeyNode(keyconfig):
+    # Get the setting with a keyboard device
+    primaryDevice = getDevice(keyconfig.find("Primary"))
+    secondaryDevice = getDevice(keyconfig.find("Secondary"))
+    if primaryDevice == "Keyboard":
+        setting = "Primary"
+    elif secondaryDevice == "Keyboard":
+        setting = "Secondary"
+    else:
+        if primaryDevice == "{{NoDevice}}".format() and secondaryDevice == "{{NoDevice}}".format():
+            print("Elite: No key configured for \t'{0}'".format(keyconfig.tag))
+        return None
+        # Get the "Secondary" mapping from the elite config
+    keyNode = keyconfig.find(setting)
+    return keyNode
+
+def getKeyNames(keyconfig):
+    keyNode = getKeyboardKeyNode(keyconfig)
+    if keyNode is None:
+        return None
+
+    # get the keys
+    keyName = getKey(keyNode)
+
+    modifiers = keyNode.findall("./Modifier")
+    # Add modifier key if there is one configured
+    modifierKeyName = None
+    if modifiers is not None:
+        for modifierKey in modifiers:
+            modifierKeyName = getKey(modifierKey)
+
+    # return the key
+    return keyName, modifierKeyName       
+
 def parsePath(path):
     envVarDelimiter="%"
     path=path.split(envVarDelimiter)
@@ -158,56 +162,49 @@ def parsePath(path):
         pathStr=path[0]
     return os.path.normpath(pathStr)
 
+
+# Load Elite Configuration
 eliteCustomBinds = parsePath(config["files"]["elite"])
 eliteConfigFile = ET.parse(eliteCustomBinds)
 eliteConfig = eliteConfigFile.getroot()
 
+# Load VoiceAttack Profile Template
 vaProfileFile = ET.parse(parsePath(config["files"]["profiletemplate"]))
 vaProfile = vaProfileFile.getroot()
 commands = vaProfile.find("Commands")
 
+# Load Edvard command configuration file
 vaMappingFile = ET.parse(parsePath(config["files"]["commands"]))
 vaMapping = vaMappingFile.getroot()
 
+# Load keycodes
 keycodesFile = ET.parse(parsePath(config["files"]["keycodes"]))
 keycodes = keycodesFile.getroot()
 
 # iterate through every action in eliteconfig
 for keyconfig in eliteConfig:
-    # get the actionname from the elite config
-    action = keyconfig.tag
-    # get the primary button mapping from the elite config
-    keyNode = keyconfig.find("Primary")
-    actionKeyCodes= []
-    isAButton = False
-    isKeyboard = False
-    isGamepad = False
-    # There is a "Primary" element so it must be a button
-    if keyNode is not None:
-        isAButton = True
-        device  = getDevice(keyNode)
-        if device is "Keyboard":
-            isKeyboard = True
-        if device is "GamePad":
-            isGamepad = True
+    # Check if it is a digital input else skip
+    keyNode = keyconfig.find("Primary") 
+    if keyNode is None:
+        continue
 
-    # when its a button
-    if isAButton is True:
+    keyNames = getKeyNames(keyconfig)
+    # When its a digital input create a voiceattack command
+    if keyNames:
+        # Initialize KeyCodes for Voiceattack
+        actionKeyCodes= []
+        # Get the actionname from the elite config
+        action = keyconfig.tag
+        if keyNames[1] is not None:
+            actionKeyCodes.append(getKeycode("Keyboard", keycodes, keyNames[1]))       
+        # Add key
+        actionKeyCodes.append(getKeycode("Keyboard", keycodes, keyNames[0]))
+
         # Get the voicecommand(context)
         commandString = getCommandString(vaMapping,action)
         replyAcceptString = getReplyAcceptString(vaMapping,action)
-        keyName = getKey(keyNode)         
-        if keyName is "":
-            printWarning("eliteconfig:\tKey not set:\t{0}".format(action))
-            #setRandomKey(keyNode)
-        else:
-            modifiers = keyNode.findall("./Modifier")
-            if modifiers is not None:
-                for modifierKey in modifiers:
-                    modifierKeyName = getKey(modifierKey)
-                    actionKeyCodes.append(getKeycode(device, keycodes, modifierKeyName))       
-            actionKeyCodes.append(getKeycode(device, keycodes, keyName))
-        if len(actionKeyCodes)>0:
+        # We have a key and a voicecommand string, create the voiceattack command
+        if commandString is not None:
             commandNode = createVoiceAttackCommand(action, actionKeyCodes, commandString, replyAcceptString)
             commands.append(commandNode)
 

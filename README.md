@@ -66,7 +66,7 @@ As soon as edvard finds a command in the elite configuration which is not in you
 
     ::
 
-        Error  :         commands:      Voicecommand not set for 'SAAThirdPersonYawLeftButton'!
+        Edvard: No CommandString for 'SAAThirdPersonYawLeftButton'
 
 So in this case the command mapping for SAAThirdPersonYawLeftButton is missing so you would have to add something like this to your commands.xml and then run edvard again.
     ::
@@ -76,15 +76,10 @@ So in this case the command mapping for SAAThirdPersonYawLeftButton is missing s
             <ReplyAccept></ReplyAccept>
         </SAAThirdPersonYawLeftButton>
 
-The following warning tells you that there is no key configured for "SAAThirdPersonYawLeftButton" in Elite, so we can't map anything to voiceattack. You have to configure a key for the command in Elite if you want to use it. Afterwards run edvard again.
+The following warning tells you that there is no key configured for "SAAThirdPersonYawLeftButton" in Elite, so we can't map any key to the voiceattack commands. You have to configure a key for that command in Elite if you want to use it. Afterwards run edvard again.
     ::
 
-        Warning:         eliteconfig:   Key not set:    SAAThirdPersonYawLeftButton
-
-In most cases you can ignore the keycode errors.
-    ::
-
-        Error  :         keycodes:      Not found:      Joy_4 for device '046DC286'
+        Elite: No key configured for 'SAAThirdPersonYawLeftButton'
 
 
 What are the other files for?

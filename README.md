@@ -25,33 +25,36 @@ This makes shared or updated voicecommand profiles directly usable.
 How?
 ====
 
-If you run the edvard.exe it will take your custom Elite Dangerous Input Configuration and create a Voiceattack profile that you can import.
+Edvard will take your custom Elite Dangerous Input Configuration and create a Voiceattack profile.
 
-The words or sentences you actually have to say to voiceattack so it can fire the command in Elite are configured in the **commands.xml**.
+The voice commands and the voice feedback are mapped to the commands of Elite in the **commands.xml**.
 
-The commands.xml is already filled with a lot of elite dangerous commands like "SetSpeed100" or "ToggleFlightAssist".
+The **commands.xml** is already filled with a lot of elite dangerous commands like "SetSpeed100" or "ToggleFlightAssist".
 
-1. Configure voicecommands and responses by editing the **commands.xml** file using a decent texteditor.
+1.   Extract the edvard.zip 
+2.   Configure voicecommands and responses by editing the **commands.xml** file using a decent texteditor.
 
-     Here is an example of a command mapping.   
-
-    ::
+     Here is an example of a single command mapping.   
 
         <SetSpeed100>
             <CommandString>Engines to one hundred percent;Engage;Full Throttle</CommandString>
             <ReplyAccept></ReplyAccept>
         </SetSpeed100>
 
-     The Elite command is "SetSpeed100".
+     In this example the Elite command is "SetSpeed100".
      You can configure multiple voice commands inside the "CommandString" by separating them with a semicolon.
      If you have only one voice command for this you don't need the semicolon.
+     
      The "ReplyAccept" is the text that will be spoken by your text-to-speech engine so that you have some kind of feedback.
      If you leave it empty like in this example it will take the first CommandString, in this case it would say "Engines to one hundred percent".
 
 
 2. Generate a new VoiceAttack Profile.
     
-    Run "python edvard.py" inside a command shell (cmd.exe). A edvard.vap file should be generated.
+    - You will need [python](https://www.python.org/downloads/) installed.
+    - When you've installed python open a command shell (cmd.exe) and change directory (cd) to where you extracted edvard.
+    - Enter "python edvard.py" inside the command shell.
+    - A edvard.vap file should be generated.
 
 3. Import the edvard.vap VoiceAttack Profile.
     
@@ -64,12 +67,9 @@ Run "python edvard.py" inside a command shell (cmd.exe) and you will see output.
 The commands in elite may change or some more may be added over time.
 As soon as edvard finds a command in the elite configuration which is not in your commands.xml it will output something like...
 
-    ::
-
         Edvard: No CommandString for 'SAAThirdPersonYawLeftButton'
 
 So in this case the command mapping for SAAThirdPersonYawLeftButton is missing so you would have to add something like this to your commands.xml and then run edvard again.
-    ::
 
         <SAAThirdPersonYawLeftButton>
             <CommandString>third person yaw left</CommandString>
